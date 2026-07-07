@@ -9,3 +9,5 @@ dist/
 tmp/
 *.tsbuildinfo
 vercel.env
+.vercel
+.env*

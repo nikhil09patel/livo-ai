@@ -7,6 +7,7 @@ import {
   Cpu,
   FileAudio,
   GitCompareArrows,
+  Heart,
   Loader2,
   RotateCcw,
   ShieldCheck,
@@ -192,7 +193,6 @@ export function PronunciationLab() {
             <p className="eyebrow">Livo AI assessment</p>
             <h1>Pronunciation Agent</h1>
           </div>
-          <div className="deadline">Due Jul 12, 2026</div>
         </header>
 
         <div className="tool-grid">
@@ -319,6 +319,11 @@ export function PronunciationLab() {
 
           <ResultView result={result} isLoading={isAnalyzing} loadingMessage={loadingMessage} />
         </div>
+
+        <footer className="credit-footer">
+          <span>Made by Nikhil</span>
+          <Heart aria-hidden="true" size={16} fill="currentColor" />
+        </footer>
       </section>
     </main>
   );

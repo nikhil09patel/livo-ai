@@ -101,15 +101,6 @@ h4 {
   margin-bottom: 8px;
 }
 
-.deadline {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--muted);
-  flex: 0 0 auto;
-  font-weight: 700;
-  padding: 10px 12px;
-}
-
 .tool-grid {
   align-items: start;
   display: grid;
@@ -604,6 +595,22 @@ mark {
   font-size: 0.86rem;
   margin: 22px 0 0;
   padding-top: 16px;
+}
+
+.credit-footer {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 0.92rem;
+  font-weight: 700;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.credit-footer svg {
+  color: var(--coral);
+  flex: 0 0 auto;
 }
 
 @media (max-width: 900px) {
