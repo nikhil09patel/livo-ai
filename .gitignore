@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+.env
+.env*.local
+.next/
+node_modules/
+coverage/
+dist/
+tmp/
+*.tsbuildinfo
+vercel.env
