@@ -40,7 +40,7 @@ export function validateAudioUpload(input: {
   if (input.sizeBytes > MAX_FILE_BYTES) {
     return {
       ok: false,
-      message: "The hosted demo accepts audio up to 4 MB. Use MP3, M4A, or WebM for a 30-45 second sample."
+      message: `The hosted demo accepts audio up to 4 MB. Use MP3, M4A, or WebM for a ${MIN_DURATION_SECONDS}-${MAX_DURATION_SECONDS} second sample.`
     };
   }
 
@@ -54,7 +54,7 @@ export function validateAudioUpload(input: {
   if (input.durationSeconds < MIN_DURATION_SECONDS || input.durationSeconds > MAX_DURATION_SECONDS) {
     return {
       ok: false,
-      message: "Audio must be between 30 and 45 seconds."
+      message: `Audio must be between ${MIN_DURATION_SECONDS} and ${MAX_DURATION_SECONDS} seconds.`
     };
   }
 
