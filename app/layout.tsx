@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Livo Pronunciation Agent",
-  description: "AI pronunciation scoring for 30-45 second English speech samples."
+  description: "AI pronunciation scoring for 5-45 second English speech samples."
 };
 
 export default function RootLayout({

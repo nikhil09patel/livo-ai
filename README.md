@@ -2,7 +2,7 @@
 
 End-to-end AI pronunciation assessment app for the Livo AI SWE assessment.
 
-The app lets a user upload a 30-45 second English audio clip, validates the clip in the browser and server, transcribes it, scores pronunciation, highlights likely mistakes, and returns practice steps. It now supports a quality cloud path and a fully free local path.
+The app lets a user upload a 5-45 second English audio clip, validates the clip in the browser and server, transcribes it, scores pronunciation, highlights likely mistakes, and returns practice steps. It now supports a quality cloud path and a fully free local path.
 
 ## Stack
 

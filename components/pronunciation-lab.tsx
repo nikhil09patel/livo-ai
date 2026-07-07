@@ -201,7 +201,7 @@ export function PronunciationLab() {
               <FileAudio aria-hidden="true" size={22} />
               <div>
                 <h2>Audio sample</h2>
-                <p>English speech, 30-45 seconds, up to 4 MB.</p>
+                <p>English speech, {MIN_DURATION_SECONDS}-{MAX_DURATION_SECONDS} seconds, up to 4 MB.</p>
               </div>
             </div>
 

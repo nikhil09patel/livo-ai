@@ -2,7 +2,7 @@
 
 ## Goal
 
-Build a public web app where a learner uploads a 30-45 second English speech sample and receives a pronunciation score, highlighted mistakes, and concrete practice steps. The assessment deadline is Sunday, July 12, 2026 at 11:59 PM IST, so the design prioritizes a small, deployable production slice over a large ML pipeline.
+Build a public web app where a learner uploads a 5-45 second English speech sample and receives a pronunciation score, highlighted mistakes, and concrete practice steps. The assessment deadline is Sunday, July 12, 2026 at 11:59 PM IST, so the design prioritizes a small, deployable production slice over a large ML pipeline.
 
 ## Components
 
@@ -20,7 +20,7 @@ flowchart LR
 ```
 
 - Browser UI: validates file size and duration before submission, collects consent, previews audio, and renders the report.
-- API route: accepts multipart upload for cloud mode, requires consent, validates file type, size, and 30-45 second duration.
+- API route: accepts multipart upload for cloud mode, requires consent, validates file type, size, and 5-45 second duration.
 - Quality cloud mode: uses Gemini `gemini-2.5-flash` through the Interactions API and Files API to transcribe audio and return structured pronunciation feedback. It falls back to `gemini-2.5-flash-lite` when the primary model is temporarily overloaded.
 - Free local mode: uses Transformers.js with `Xenova/whisper-tiny.en` in the browser. It tries WebGPU/FP16 first for speed, then falls back to WASM/FP32 to avoid ONNX quantization failures. It avoids API cost and app-server upload, but scoring is based on transcript, pace, and hesitation signals rather than acoustic confidence.
 - Smart compare mode: runs `tiny.en` first, scores transcript quality locally, and runs `Xenova/whisper-base.en` only when the first transcript is weak. When both run, it selects the stronger transcript using completeness, cleanliness, pace, and word-overlap agreement. This keeps latency low while adding a second local model where it is most useful.
